@@ -1,58 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Basic Bar Chart with D3</title>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-  </head>
-  <body>
-    <svg width="400" height="300"></svg>
-    <script>
-      // set the dataset
-      var dataset = [10, 20, 30, 40, 50];
-      
-      // set the width and height of the chart
-      var width = 400;
-      var height = 300;
-      
-      // set the bar width and spacing
-      var barWidth = width / dataset.length;
-      var barSpacing = 5;
-      
-      // create the x scale
-      var xScale = d3.scaleLinear()
-                     .domain([0, dataset.length])
-                     .range([0, width]);
-      
-      // create the y scale
-      var yScale = d3.scaleLinear()
-                     .domain([0, d3.max(dataset)])
-                     .range([height, 0]);
-      
-      // create the svg element
-      var svg = d3.select("svg");
-      
-      // create the bars
-      svg.selectAll("rect")
-         .data(dataset)
-         .enter()
-         .append("rect")
-         .attr("x", function(d, i) { return i * (barWidth + barSpacing); })
-         .attr("y", function(d) { return yScale(d); })
-         .attr("width", barWidth)
-         .attr("height", function(d) { return height - yScale(d); })
-         .attr("fill", "steelblue");
-      
-      // create the x axis
-      var xAxis = d3.axisBottom(xScale);
-      svg.append("g")
-         .attr("transform", "translate(0," + height + ")")
-         .call(xAxis);
-      
-      // create the y axis
-      var yAxis = d3.axisLeft(yScale);
-      svg.append("g")
-         .call(yAxis);
-    </script>
-  </body>
+<head>
+  <title>D3.js Tutorial</title>
+  <!-- CSS FILES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link href="css/aos.css" rel="stylesheet">
+  <link href="css/templatemo-nomad-force.css" rel="stylesheet">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .rect:hover { opacity: 0.5; } 
+    
+  </style>
+</head>
+<body>
+  <div style="text-align: center;">
+    <h1>D3.js Barchart</h1>
+    <div id="d3-container" />
+  </div>
+  <button class="bar" onclick="changeVariable()">Change Variable</button>
+ <script type="text/javascript" src="js/index.js"></script>
+
+  <div style="width:500px;height:500px;text-align: center;">
+    
+    <h1>D3.js Barchart2</h1>
+  <div class="chart" />
+</div>
+
+  <script type="text/javascript" src="js/test.js"></script>
+</body>
 </html>

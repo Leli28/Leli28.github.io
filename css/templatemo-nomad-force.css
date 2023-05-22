@@ -440,6 +440,11 @@ strong {
   background: var(--section-bg-color);
 }
 
+#about{
+  background: var(--section-bg-color);
+  margin-bottom: 3rem;
+}
+
 .news-thumb {
   position: relative;
 }
@@ -610,6 +615,16 @@ strong {
 .copyright-text {
   color: rgba(255, 255, 255, 0.45);
   font-size: var(--copyright-text-font-size);
+}
+
+
+
+.bar{
+
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+  color: #198754;
 }
 
 /*---------------------------------------
