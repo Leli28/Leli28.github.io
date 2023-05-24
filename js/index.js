@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function barchart() {
 const data = [
-    { name: 'A', score: 78 },
+    { name: 'C', score: 78 },
     { name: 'B', score: 82 },
-    { name: 'C', score: 90 },
+    { name: 'A', score: 90 },
   ];
   
   
