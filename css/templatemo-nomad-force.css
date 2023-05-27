@@ -525,10 +525,14 @@ strong {
   z-index: 9;
 }
 
-.image-popup:hover .portfolio-image,
+.text-warning{
+  font-weight: bold;
+}
+.image-popup .portfolio-image,
 .news-image-hover:hover .news-image {
   transform: scale(1.02);
 }
+
 
 .news-two-column {
   min-height: 199px;
