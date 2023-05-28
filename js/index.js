@@ -15,8 +15,8 @@ const data = [
   ];
   
   
-  const width = 500;
-  const height = 450;
+  const width = 550;
+  const height = 500;
   const margin = { top: 50, bottom: 50, left: 50, right: 50 };
   
    svg = d3.select('#d3-container')
